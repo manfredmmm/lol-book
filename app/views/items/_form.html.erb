@@ -1,0 +1,14 @@
+<%= form_for @item do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="form-actions">
+    <%= f.submit "Acceptar" %>
+  </div>
+<% end %>
+<%= link_to 'Enrere', items_path %>

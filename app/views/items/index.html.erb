@@ -1,0 +1,13 @@
+<h1>Objectes</h1>
+
+<ul>
+	<% @items.each do |item| %>
+		<li>
+			<%= link_to item.name, item_path(item) %>: <%= item.description %>
+			<%= link_to 'Editar', edit_item_path(item) %>
+			<%= link_to 'Esborrar', item_path(item), :method => :delete, :confirm => 'Estas segur?' %>
+		</li>
+	<% end %>
+</ul>
+
+<%= link_to 'Crear un nou objecte', new_item_path %>
