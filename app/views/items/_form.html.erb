@@ -1,7 +1,11 @@
-<%= form_for @item do |f| %>
+<%= form_for @item, :html => { :multipart => true } do |f| %>
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
   </div>
   <div class="field">
     <%= f.label :description %>
@@ -12,3 +16,4 @@
   </div>
 <% end %>
 <%= link_to 'Enrere', items_path %>
+
