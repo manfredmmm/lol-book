@@ -29,3 +29,6 @@ gem 'mysql2'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+gem 'haml'
+gem 'paperclip'
