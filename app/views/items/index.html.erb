@@ -3,7 +3,7 @@
 <ul>
 	<% @items.each do |item| %>
 		<li>
-			<%= image_tag item.avatar.url %
+      <%= image_tag item.avatar.url %>
 			<%= link_to item.name, item_path(item) %>: <%= item.description %>
 			<%= link_to 'Editar', edit_item_path(item) %>
 			<%= link_to 'Esborrar', item_path(item), :method => :delete, :confirm => 'Estas segur?' %>
