@@ -1,7 +1,11 @@
-<%= form_for @champion do |f| %>
+<%= form_for @champion, :html => { :multipart => true } do |f| %>
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
   </div>
   <div class="field">
     <%= f.label :description %>
