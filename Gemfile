@@ -32,3 +32,4 @@ gem 'mysql2'
 
 gem 'haml'
 gem 'paperclip'
+gem 'devise'

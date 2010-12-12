@@ -1,0 +1,11 @@
+%h1 Campions
+
+%ul
+  - @champions.each do |champion|
+    %li
+      = image_tag champion.avatar.url
+      = link_to champion.name, champion_path(champion)
+      = champion.description
+      = link_to 'Editar', edit_champion_path(champion) 
+      = link_to 'Esborrar', champion_path(champion), :method => :delete, :confirm => 'Estas segur?'
+= link_to 'Crear un nou campio', new_champion_path
