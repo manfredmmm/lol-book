@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  champion_id: 1
+  kills: 1
+  deaths: 1
+  assists: 1
+
+two:
+  champion_id: 1
+  kills: 1
+  deaths: 1
+  assists: 1

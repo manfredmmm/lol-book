@@ -4,5 +4,7 @@ LolBook::Application.routes.draw do
 
   resources :champions
   resources :items
-  root :to => 'champions#index'
+  resources :plays
+
+  root :to => 'plays#index'
 end

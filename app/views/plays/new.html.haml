@@ -1,0 +1,20 @@
+%h1 Nou play
+
+= form_for @play do |f|
+  .field 
+    = f.label :champion
+    = f.select :champion, options_from_collection_for_select(@champions, :id, :name)
+  .field
+    - 6.times do |i|
+      = label_tag 'item_' + i.to_s 
+      = select_tag 'items[]', options_from_collection_for_select(@items, :id, :name), :id => 'item_'+i.to_s
+  .field
+    = f.label :kills
+    = f.text_field :kills
+  .field
+    = f.label :deaths
+    = f.text_field :deaths
+  .field
+    = f.label :assists
+    = f.text_field :assists
+

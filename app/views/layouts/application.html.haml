@@ -10,9 +10,13 @@
     %p.alert= alert
     - if user_signed_in?
       = "Hola #{current_user.email}"
+      = link_to 'Desconectar', destroy_user_session_path
     - else
       = link_to 'Registrar usuari', new_user_registration_path
+      %h1
+      = link_to 'Entrar', user_session_path
     %ul
+      %li= link_to 'Portada', root_path
       %li= link_to 'Campions', champions_path
       %li= link_to 'Objectes', items_path
     = yield
